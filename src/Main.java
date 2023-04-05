@@ -12,7 +12,7 @@ public class Main {
             return 1; // if n=1 it returns 1
         }
         else{
-            return Fibonacci(n-1)+Fibonacci(n-2); //in recursive case, returns sum of functions
+            return Fibonacci(n-1)+Fibonacci(n-2); //in recursive case, return sum of functions
         }
     }
 }
