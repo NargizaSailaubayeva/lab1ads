@@ -1,19 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        int n = 9;
-        int m = n/2;
-        System.out.println(primeOrComposite(n, m));
+        int n = 5;
+
+        System.out.println(Factorial(n));
     }
-    public static String primeOrComposite(int n, int m) {
-        if (m == 1){
-            return "Prime"; //if m =1 then this function returns the word prime
-        }
-        else if(n%m ==0){
-           return "Composite"; // if n is divisible by m without remainder , it returns the word composite, if the first base case does not match the criteria
+    public static int Factorial(int n) {
+        if(n==1){
+            return 1; //In this base case, if n=1 it returns 1
         }
         else{
-            return primeOrComposite(n,m-1); //if the first and second base case do not match the criteria, in this case will work recursive case
+            return Factorial(n-1)*n; //If base case does not match the criteria, this recursive case will work
         }
-
     }
 }
