@@ -1,18 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-
-        int[] arr = {3, 2, 4, 1};
-        int n = 4;
-        System.out.println(findAverage(arr, n));
+        int n = 9;
+        int m = n/2;
+        System.out.println(primeOrComposite(n, m));
     }
-
-    public static double findAverage(int[] arr, int n) {
-        if (n == 0)
-            return 0;
-        else {
-            double sum = findAverage(arr, n - 1)*(n-1);
-            sum += arr[n-1];
-            return sum/n;
+    public static String primeOrComposite(int n, int m) {
+        if (m == 1){
+            return "Prime"; //if m =1 then this function returns the word prime
         }
+        else if(n%m ==0){
+           return "Composite"; // if n is divisible by m without remainder , it returns the word composite, if the first base case does not match the criteria
+        }
+        else{
+            return primeOrComposite(n,m-1); //if the first and second base case do not match the criteria, in this case will work recursive case
+        }
+
     }
 }
