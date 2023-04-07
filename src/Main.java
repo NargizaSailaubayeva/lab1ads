@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        int n = 2;
-        int m = 10;
+        int a = 32;
+        int b = 48;
 
-        System.out.println(powerOfNum(n,m));
+        System.out.println(gcd(a,b));
     }
-    public static int powerOfNum(int n, int m) {
-        if(m==0){
-            return 1; //if counter m=0, it returns 1
+    public static int gcd(int a, int b) {
+        if(b==0){
+            return a;
         }
         else{
-            return powerOfNum(n,m-1)*n; //in recursive case, it returns n*recursion
+            return gcd(b,a%b);
         }
     }
 }
