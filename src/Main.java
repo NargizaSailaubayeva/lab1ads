@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        int a = 32;
-        int b = 48;
+        int n = 7;
+        int k = 3;
 
-        System.out.println(gcd(a,b));
+        System.out.println(binomialCoefficient(n,k));
     }
-    public static int gcd(int a, int b) {
-        if(b==0){
-            return a;
+    public static int binomialCoefficient(int n, int k) {
+        if(k==0 || k==n) {
+            return 1;
         }
         else{
-            return gcd(b,a%b);
+            return binomialCoefficient(n-1,k-1)+binomialCoefficient(n-1,k);
         }
     }
 }
