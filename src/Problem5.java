@@ -1,5 +1,11 @@
 public class Problem5 {
-    public static int Fibonacci(int n) {
+    /**
+     * @ findFibonacci - a set of statements that calculates fibonacci sequence of given number
+     * @ n - given number
+     * @ return - calculates the fibonacci sequence of given number with using recursion
+
+     */
+    public static int findFibonacci(int n) {
         if(n==0){
             return 0; //if n=0 it returns 0
         }
@@ -7,7 +13,7 @@ public class Problem5 {
             return 1; // if n=1 it returns 1
         }
         else{
-            return Fibonacci(n-1)+Fibonacci(n-2); //in recursive case, return sum of functions
+            return findFibonacci(n-1)+findFibonacci(n-2); //in recursive case, return sum of functions with using recursion
         }
     }
 }
