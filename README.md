@@ -1,6 +1,12 @@
-# lab1ads
+# Laboratory 1 Algorithms and Data Structures
 ## Description
-In this repository, I made lab 1 for ads by using function and recursion.
+In this repository, I made laboratory 1 for Algorithms and Data Structures by using function and recursion.
++ ***Algorithms and Data Structures*** - the main focus of the course is designed on solving computational problems that involve collections of data.
++ ***Function*** is a block of organized, reusable code that is used to perform a single, related action.
++ ***Recursion*** is a programming technique where a function calls itself with some part of the task. And it is the process of repeating items in a self-similar way. 
+![function](https://4.bp.blogspot.com/-KrDSb9PB4uM/VXbBkXYtPxI/AAAAAAAAAKk/mFmhFmNS8X4/s1600/C-Function-Definition.jpg)
+
+![recursion](https://media.geeksforgeeks.org/wp-content/cdn-uploads/recursion.jpg)
 ___
 ### Promblem 1
 *In this problem, I wrote a code in which the function returns the minimum of them. In this code I have a function `findMin(int[] arr, int n)`.*
@@ -42,7 +48,7 @@ public static double findAverage(int[] arr, int n) {
 ```
 ___
 ### Problem 3
-*In this problem, I wrote a code where the function checks a given number prime or composite. In this cose I have a function `checkPrimeOrComposite(int n, int m)`.*
+*In this problem, I wrote a code where the function checks a given number prime or composite. In this code I have a function `checkPrimeOrComposite(int n, int m)`.*
 #### Definitions
 + @ checkPrimeOrComposite - a set of statements that checks if a given number is prime or composite
 + @ n - given number
@@ -64,6 +70,7 @@ public static String checkPrimeOrComposite(int n, int m) {
 ```
 ___
 ### Problem 4
+*In this problem, I wrote a code where the function calculates the factorial of a given number with using recursion. In this code I have a function `findFactorial(int n)`.*
 #### Definitions
 + @ findFactorial - a set of statements that calculates factorial of given number
 + @ n - given number
@@ -81,6 +88,7 @@ public static int findFactorial(int n) {
 ```
 ___
 ### Problem 5
+*In this problem, I wrote a code where the function calculates the fibonacci sequence of a given number with using recursion. In this code I have a function `findFibonacci(int n)`.*
 #### Definitions
 + @ findFibonacci - a set of statements that calculates fibonacci sequence of given number
 + @ n - given number
@@ -101,6 +109,7 @@ public static int findFibonacci(int n) {
 ```
 ___
 ### Problem 6
+*In this problem, I wrote a code where the function calculates the m power of a given number with using recursion. In this code I have a function `findPowerOfNum(int n, int m)`.*
 #### Definitions
 + @ findPowerOfNum - a set of statements that calculates n power of m
 + @ n - given number
@@ -119,6 +128,7 @@ public static int findPowerOfNum(int n, int m) {
 ```
 ___
 ### Problem 7
+*In this problem, I wrote a code where the function reverses the elements of an array with using recursion. In this code I have a function `reverse(int[] arr, int start, int end)`.*
 #### Definitions
 + @ reverse - a set of statements that reverses the elements of an array between the given start and end indices.
 + @ arr the array to be reversed
@@ -142,6 +152,7 @@ public static void reverse(int[] arr, int start, int end) {
 ```
 ___
 ### Problem 8
+*In this problem, I wrote a code where the function checks the string does it consist only digits with using recursion. In this code I have a function `consistDigit(String s)`.*
 #### Definitions
 + @ consistDigit - a set of statements that checks whether the string consists of digits only
 + @ s - given number
@@ -161,6 +172,7 @@ public static String consistDigit(String s) {
 ```
 ___
 ### Problem 9
+*In this problem, I wrote a code where the function calculates the binomial coefficient of given numbers with using recursion. In this code I have a function `findBinomialCoefficient(int n, int k)`.*
 #### Definitions
 + @ findPowerOfNum - a set of statements that calculates the binomial coefficient
 + @ n - given number
@@ -179,6 +191,7 @@ public static int findBinomialCoefficient(int n, int k) {
 ```
 ___
 ### Problem 10
+*In this problem, I wrote a code where the function calculates the GCD of given numbers with using recursion. In this code I have a function `findGCD(int a, int b)`.*
 #### Definitions
 + @ findGCD - a set of statements that calculates the gcd
 + @ a - given number
@@ -194,5 +207,86 @@ public static int findGCD(int a, int b) {
             return findGCD(b,a%b);
         }
     }
+```
+___
+### Main
+*In this problem, I wrote a code where other previously written functions are called.*
+#### Solution
+```java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Choose the problem number: ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        switch (n) {
+            case 1: // call problem 1
+                int[] arr = {10, 1, 32, 3, 45};
+                int min = Problem1.findMin(arr, arr.length);
+                System.out.println("Min from arr is: " + min);
+                break;
+
+            case 2: // call problem 2
+                int[] arr2 = {3, 2, 4, 1};
+                double avg = Problem2.findAverage(arr2, arr2.length);
+                System.out.println("The average value is: " + avg);
+                break;
+
+            case 3: // call problem 3
+                int num = 7;
+                String res = Problem3.checkPrimeOrComposite(num, num / 2);
+                System.out.println("Given number is: " + res);
+                break;
+
+            case 4: // call problem 4
+                int m = 5;
+                int fact = Problem4.findFactorial(m);
+                System.out.println("The factorial of " + m + " is: " + fact);
+                break;
+
+            case 5: // call problem 5
+                int fibon = 17;
+                int fibnum = Problem5.findFibonacci(fibon);
+                System.out.println("The Fibonacci sequence of " + fibon + " is: " + fibnum);
+                break;
+
+            case 6: // call problem 6
+                int number = 2;
+                int degree = 10;
+                int pow = Problem6.findPowerOfNum(number, degree);
+                System.out.println(number + " to the power of  " + degree + " is: " + pow);
+                break;
+
+            case 7: // call problem 7
+                int[] arr3 = {1, 4, 6, 2};
+                Problem7.reverse(arr3, 0, arr3.length - 1);
+                break;
+
+            case 8: // call problem 8
+                String str = "123456";
+                String consist = Problem8.consistDigit(str);
+                System.out.println("Does the string contain only digits? " + consist);
+                break;
+
+            case 9: // call problem 9
+                int numnum = 7;
+                int coef = 3;
+                int result = Problem9.findBinomialCoefficient(numnum, coef);
+                System.out.println("Binomial coefficient of " + numnum + " and " + coef + " is: " + result);
+                break;
+
+            case 10: // call problem 10
+                int a = 32;
+                int b = 48;
+                int gcdnum = Problem10.findGCD(a, b);
+                System.out.println("GCD of " + a + " and " + b + " is: " + gcdnum);
+                break;
+
+            default: // if you will write another number
+                System.out.println("Wrong problem number");
+        }
+    }
+
+}
 ```
 ___
