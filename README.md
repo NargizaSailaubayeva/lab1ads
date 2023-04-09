@@ -1,7 +1,6 @@
 # Laboratory 1 Algorithms and Data Structures
 
 ![hello](https://i.pinimg.com/originals/1e/3e/37/1e3e3738d81b9db4f6b6505b236a996a.gif)
-
 ## Description
 In this repository, I made laboratory 1 for Algorithms and Data Structures by using function and recursion.
 + ***Algorithms and Data Structures*** - the main focus of the course is designed on solving computational problems that involve collections of data.
