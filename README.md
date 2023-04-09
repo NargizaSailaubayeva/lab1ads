@@ -292,3 +292,7 @@ public class Main {
 }
 ```
 ___
+## Installation
+IntelliJ IDEA 2022.3.1
+## Contributing
+Bug reports and\or pull requests are welcome. 
