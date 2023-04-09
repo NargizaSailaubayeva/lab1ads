@@ -8,13 +8,36 @@ In this repository, I made lab 1 for ads by using function and recursion.
 + @ arr - array of elements where need to find minimum
 + @ n - size of an array
 + @ return - in base case, it returns first element of array, in recursive case, it returns minimum of function with using recursion
-#problem 2
-In this problem, I wrote a code in which the function returns the average of them. In this code I have a function findAverage(int[] arr, int n).
-@ findAverage - a set of statements that calculates average of given array
-@ arr - array of elements where need to find average of them
-@ n - size of an array
-@ return - in base case, it returns , in recursive case, it returns minimum of function with using recursion
-#problem 3
+#### Solution
+```java
+ public static int findMin(int[] arr, int n) {
+        if (n == 1) //base case return first element of array if n=1
+            return arr[0];
+        else { //recursive case return minimum of function
+            int min = findMin(arr, n - 1);
+            return Math.min(min, arr[n - 1]);
+        }
+    }
+```
+### Problem 2
+*In this problem, I wrote a code in which the function returns the average of them. In this code I have a function findAverage(int[] arr, int n).*
++ @ findAverage - a set of statements that calculates average of given array
++ @ arr - array of elements where need to find average of them
++ @ n - size of an array
++ @ return - in base case, it returns , in recursive case, it returns minimum of function with using recursion
+#### Solution
+```java
+public static double findAverage(int[] arr, int n) {
+        if (n == 0)// base case return 0, if n=0
+            return 0;
+        else { //recursive case returns minimum of function with using recursion
+            double sum = findAverage(arr, n - 1)*(n-1);
+            sum += arr[n-1];
+            return sum/n;
+        }
+    }
+```
+### Problem 3
 In this problem, I wrote a code where the function checks a given number prime or composite. In this cose I have a function primeOrComposite(int n, int m)
 @ primeOrComposite - a set of statements that check is a given number prime or composite
 @ n - given number
