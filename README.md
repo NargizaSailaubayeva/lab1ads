@@ -4,6 +4,8 @@ In this repository, I made laboratory 1 for Algorithms and Data Structures by us
 + ***Algorithms and Data Structures*** - the main focus of the course is designed on solving computational problems that involve collections of data.
 + ***Function*** is a block of organized, reusable code that is used to perform a single, related action.
 + ***Recursion*** is a programming technique where a function calls itself with some part of the task. And it is the process of repeating items in a self-similar way. 
+
+
 ![function](https://4.bp.blogspot.com/-KrDSb9PB4uM/VXbBkXYtPxI/AAAAAAAAAKk/mFmhFmNS8X4/s1600/C-Function-Definition.jpg)
 
 ![recursion](https://media.geeksforgeeks.org/wp-content/cdn-uploads/recursion.jpg)
